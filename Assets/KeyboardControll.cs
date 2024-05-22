@@ -11,16 +11,25 @@ public class KeyboardControll : MonoBehaviour
     const int force = 3;
     Rigidbody2D rig;
     public GameObject myPrefab;
+    public GameObject hp_overlay;
     const int bullet_speed = 600;
+    public int Max_HP { get; set; } = 600;
+    public int HP { get; set; } = 600;
+
     
     // Start is called before the first frame update
     private void Start()
     {
         rig = GetComponent<Rigidbody2D>();
     }
+
+    public void apply_dmg(int amount)
+    {
+        HP -= amount;
+    }
     void Update()
     {
-        
+        hp_overlay.SendMessage("display", $"HP : {Max_HP}/{HP}");
         if (Input.GetKey(left))
         {
             rig.AddForce(new Vector3
