@@ -8,7 +8,7 @@ public class KeyboardControll : MonoBehaviour
     const KeyCode right = KeyCode.D;
     const KeyCode up = KeyCode.W;
     const KeyCode down = KeyCode.S;
-    const int force = 3;
+    const int force = 15;
     Rigidbody2D rig;
     public GameObject myPrefab;
     public GameObject hp_overlay;
@@ -65,7 +65,7 @@ public class KeyboardControll : MonoBehaviour
         if(Input.GetMouseButtonDown(0))
         {
             var shoot_dir = ShootingDirection();                   
-            var bullet = Instantiate(myPrefab, Pos() + shoot_dir * 3, Quaternion.identity);
+            var bullet = Instantiate(myPrefab, Pos() + shoot_dir * (transform.localScale.x * 1.2f), Quaternion.identity);
             var bullet_rigid = bullet.GetComponent<Rigidbody2D>();
             bullet_rigid.AddForce(shoot_dir * bullet_speed);
         }

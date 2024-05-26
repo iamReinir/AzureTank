@@ -18,7 +18,6 @@ public class BulletBehaviour : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Colliding");
         collision.gameObject.SendMessage("apply_dmg", 100);
         Destroy(gameObject);
     }
