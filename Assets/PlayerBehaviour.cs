@@ -1,7 +1,5 @@
-using System;
-using UnityEngine;
-using UnityEngine.UIElements;
 using Const;
+using UnityEngine;
 
 public class PlayerBehaviour : MonoBehaviour
 {
@@ -18,8 +16,7 @@ public class PlayerBehaviour : MonoBehaviour
     int HP { get; set; } = 600;
 
     // Helper variables
-    Rigidbody2D rig;
-    Vector2 facing_dir;
+    Rigidbody2D rig;    
     
     // Start is called before the first frame update
     private void Start()
@@ -51,7 +48,7 @@ public class PlayerBehaviour : MonoBehaviour
     void Moving_check()
     {
         Vector2 mov_dir = new Vector2();
-        if (Input.GetKey(Key.left))
+        if (Input.GetKey(Key.LEFT))
         {
           mov_dir += new Vector2
             {
@@ -59,7 +56,7 @@ public class PlayerBehaviour : MonoBehaviour
                 y = 0
             };
         }
-        if (Input.GetKey(Key.right))
+        if (Input.GetKey(Key.RIGHT))
         {
             mov_dir += (new Vector2
             {
@@ -67,7 +64,7 @@ public class PlayerBehaviour : MonoBehaviour
                 y = 0
             });
         }
-        if (Input.GetKey(Key.up))
+        if (Input.GetKey(Key.UP))
         {
             mov_dir += (new Vector2
             {
@@ -75,7 +72,7 @@ public class PlayerBehaviour : MonoBehaviour
                 y = mov_speed
             });
         }
-        if (Input.GetKey(Key.down))
+        if (Input.GetKey(Key.DOWN))
         {
             mov_dir += (new Vector2
             {

@@ -1,11 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BulletBehaviour : MonoBehaviour
 {
     // Start is called before the first frame update
-    CircleCollider2D collider;
     float live_time = 3;
     void Start()
     {
