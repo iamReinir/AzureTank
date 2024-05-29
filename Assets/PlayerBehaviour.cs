@@ -1,5 +1,7 @@
 using Const;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI; // For reloading the scene
 
 public class PlayerBehaviour : MonoBehaviour
 {
@@ -16,8 +18,16 @@ public class PlayerBehaviour : MonoBehaviour
     int HP { get; set; } = 600;
 
     // Helper variables
-    Rigidbody2D rig;    
-    
+    Rigidbody2D rig;
+
+    // UI elements for Game Over
+    public GameObject gameOverPanel;
+    public Text gameOverText;
+
+
+    // Game state
+    public bool isGameOver = false;
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -86,6 +96,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     void Shooting_check()
     {
+        if (isGameOver) return;
         if (Input.GetMouseButtonDown(0))
         {
             var argument = new TurretBehaviour.Arg
@@ -100,6 +111,10 @@ public class PlayerBehaviour : MonoBehaviour
     public void apply_dmg(int amount)
     {
         HP -= amount;
+        if(HP <= 0)
+        {
+            Dead();
+        }
     }
     Vector2 ShootingDirection()
     {
@@ -118,5 +133,33 @@ public class PlayerBehaviour : MonoBehaviour
     Vector2 Pos()
     {
         return this.transform.position;
+    }
+    public void IncreaseHP(int amount)
+    {
+        HP += amount;
+        if (HP > Max_HP)
+        {
+            HP = Max_HP;
+        }
+    }
+
+    public void DecreaseHP(int amount)
+    {
+        HP -= amount;
+        if (HP == 0)
+        {
+            Dead();
+        }
+    }
+
+    public void Dead()
+    {
+        // Display "Game Over" message
+        gameOverPanel.SetActive(true);
+        gameOverText.text = "Game Over";
+        isGameOver = true;
+
+        // Stop the game
+        Time.timeScale = 0;
     }
 }
