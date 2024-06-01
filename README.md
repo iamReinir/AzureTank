@@ -9,11 +9,14 @@ Azuretank is an offline game, where players control a tank and must destroy the 
 ...
 ### How to play it
 ...
+### What teachnical we use
+* C#
+* Unity
 ## About us
-- [iamReinir](https://github.com/iamReinir): PM, Dev Support, Music Designer
+- [iamReinir](https://github.com/iamReinir): Dev Support, Music Designer
 - [CanhTruongKool](https://github.com/CanhTruongKool): Developer
 - [Bùi Ngọc Bảo Trân](https://github.com/2bngbtran04): Document Manager, Support Design Story
 - [Arthur Cap](https://github.com/Arthur-Cap): Graphic Designer
 - [Phạm Ngọc Quyền](https://github.com/pnquyen24): Tester
 - [Nguyễn Dũng](https://github.com/Dungnguyengl): Developer
-- [dongloi2504](https://github.com/dongloi2504): Gameplay Designer, Story Designer
+- [dongloi2504](https://github.com/dongloi2504): PM, Gameplay Designer, Story Designer
