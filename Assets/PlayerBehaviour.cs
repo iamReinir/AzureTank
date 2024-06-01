@@ -12,8 +12,8 @@ public class PlayerBehaviour : MonoBehaviour
     public GameObject gun;
 
     // Player's stats
-    const int mov_speed = 15;
-    const int bullet_speed = 600;
+    const int mov_speed = 5;
+    const int bullet_speed = 1000;
     int Max_HP { get; set; } = 600;
     int HP { get; set; } = 600;
 

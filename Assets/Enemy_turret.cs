@@ -5,7 +5,7 @@ public class Enemy_turret : MonoBehaviour
 {
     public GameObject? bullet_prefab;
     public GameObject? target;
-    const int bullet_speed = 600;
+    const int bullet_speed = 1000;
     const int shoot_speed = 60;
     const float give_up_dist = 15;
     const float comfort_dist = 5;
