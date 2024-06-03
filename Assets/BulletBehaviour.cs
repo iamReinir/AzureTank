@@ -3,7 +3,7 @@ using UnityEngine;
 public class BulletBehaviour : MonoBehaviour
 {
     // Start is called before the first frame update
-    float live_time = 3;
+    float live_time = 0.8f;
     void Start()
     {
         Destroy(gameObject, live_time);
@@ -11,7 +11,7 @@ public class BulletBehaviour : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {        
+    {
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -20,9 +20,9 @@ public class BulletBehaviour : MonoBehaviour
             collision.gameObject.SendMessage("apply_dmg", 100, SendMessageOptions.DontRequireReceiver);
             Destroy(gameObject);
         }
-        if (collision.gameObject.CompareTag("Untagged"))
+        if (collision.gameObject.CompareTag("Enemy"))
         {
-            collision.gameObject.SendMessage("Hit", SendMessageOptions.DontRequireReceiver);
+            collision.gameObject.SendMessage("Hit", 1, SendMessageOptions.DontRequireReceiver);
             Destroy(gameObject);
         }
     }
