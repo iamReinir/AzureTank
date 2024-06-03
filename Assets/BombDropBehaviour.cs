@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.U2D;
 
 public class BombDropBehaviour : MonoBehaviour
 {
@@ -19,14 +16,14 @@ public class BombDropBehaviour : MonoBehaviour
         currentScale = transform.localScale;
     }
     void Update()
-    {   
+    {
         if (current_life < 5)
         {
             gameObject.GetComponent<CircleCollider2D>().enabled = true;
             sprite.color = Color.red;
         }
         if (current_life < 0)
-        {            
+        {
             Destroy(gameObject);
             return;
         }
@@ -34,11 +31,15 @@ public class BombDropBehaviour : MonoBehaviour
         currentScale.y -= strink_rate;
         currentScale.z -= strink_rate;
         transform.localScale = currentScale;
-        -- current_life;
+        --current_life;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
-    {        
-        collision.gameObject.SendMessage("apply_dmg", 200);
+    {
+        if (collision.gameObject.CompareTag("Entity"))
+        {
+            collision.gameObject.SendMessage("apply_dmg", 200, SendMessageOptions.DontRequireReceiver);
+            Destroy(gameObject);
+        }
     }
 }
