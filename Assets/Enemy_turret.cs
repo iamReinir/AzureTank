@@ -1,4 +1,9 @@
 #nullable enable
+using Const;
+using System;
+using System.Collections.Generic;
+using Unity.Mathematics;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Enemy_turret : MonoBehaviour
@@ -14,12 +19,20 @@ public class Enemy_turret : MonoBehaviour
     int moving_speed = 7;
     int hp = 3;
 
+    public GameObject? bombPickupPrefab; // Prefab of bomb
+    public GameObject? healthPickupPrefab; // Prefab of health
+    public GameObject? rocketPickupPrefab; // Prefab of rocket
+
     private PlayerBehaviour? player;
+    private CommonHelper? helper;
+    SpriteRenderer? spriteRenderer;
 
     [System.Obsolete]
     void Start()
     {
         player = FindObjectOfType<PlayerBehaviour>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        helper = new CommonHelper();
     }
 
     Vector2 Pos()
@@ -89,27 +102,50 @@ public class Enemy_turret : MonoBehaviour
         target = null;
     }
 
-    public void Hit()
+    public void Hit(int dame)
     {
-        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
-        ApplyDame(spriteRenderer);
+        ApplyDame(dame);
     }
 
-    private void ApplyDame(SpriteRenderer spriteRenderer)
+    private void ApplyDame(int dame)
     {
         if (spriteRenderer == null)
         {
             return;
         }
-        else
+        else if(hp > 0)
         {
-            hp -= 1;
+            hp -= dame;
         }
         switch (hp)
         {
-            case 0: Destroy(gameObject); break;
+            case 0: { DropItem(); Destroy(gameObject); break; }
             case 1: spriteRenderer.color = Color.gray; break;
             case 2: spriteRenderer.color = Color.yellow; break;
+        }
+    }
+
+    private void DropItem()
+    {
+        List<GameObject> validPickups = new List<GameObject>();
+        if (healthPickupPrefab != null)
+        {
+            validPickups.Add(healthPickupPrefab);
+        }
+
+        if (bombPickupPrefab != null)
+        {
+            validPickups.Add(bombPickupPrefab);
+        }
+        if (rocketPickupPrefab != null)
+        {
+            validPickups.Add(rocketPickupPrefab);
+        }
+
+        if (validPickups.Count > 0 && helper?.Rand() < helper?.dropChance)
+        {
+            GameObject pickup = helper.GetRandomPickup(validPickups.ToArray());
+            Instantiate(pickup, transform.position, Quaternion.identity);
         }
     }
 }
