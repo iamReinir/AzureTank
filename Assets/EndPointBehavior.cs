@@ -22,7 +22,7 @@ public class EndPointBehavior : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Entity"))
+        if (collision.gameObject.CompareTag(Const.Tag.player))
         {
             Endgame("You win");
         }

@@ -6,7 +6,7 @@ namespace Assets
     {
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.CompareTag("Entity"))
+            if (other.CompareTag(Const.Tag.player))
             {
                 PlayerBehaviour player = other.GetComponent<PlayerBehaviour>();
                 if (player != null)

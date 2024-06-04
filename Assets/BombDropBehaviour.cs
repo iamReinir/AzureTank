@@ -36,7 +36,7 @@ public class BombDropBehaviour : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Entity"))
+        if (collision.gameObject.CompareTag(Const.Tag.player))
         {
             collision.gameObject.SendMessage("apply_dmg", 200, SendMessageOptions.DontRequireReceiver);
             Destroy(gameObject);
