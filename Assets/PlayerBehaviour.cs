@@ -17,7 +17,7 @@ public class PlayerBehaviour : MonoBehaviour
     const int mov_speed = 5;
     const int bullet_speed = 1000;
     int Max_HP { get; set; } = 600;
-    int HP { get; set; } = 600;
+    public int HP { get; set; } = 600;
 
     // Enemy count: if enemy number == 0 => win game
     int enemyCount = 0;
