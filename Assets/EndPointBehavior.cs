@@ -1,40 +1,31 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class EndPointBehavior : MonoBehaviour
 {
-    // UI elements for Game Over
+    [SerializeField]
     public GameObject gameOverPanel;
-    public Text gameOverText;
 
-    public bool isWinGame = false;
-    // Start is called before the first frame update
-    void Start()
-    {
+    [SerializeField]
+    public GameObject intervention;
 
-    }
+    public static bool isEndGame = false;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Entity"))
         {
-            Endgame("You win");
+            Endgame(true);
         }
     }
-    public void Endgame(string text)
+    public void Endgame(Boolean gameResult)
     {
-        // Display "Game Over" message
-        gameOverPanel.SetActive(true);
-        gameOverText.text = text;
-        isWinGame = false;
 
-        // Stop the game
+        intervention.SetActive(true);
+        gameOverPanel.SetActive(true);
+        isEndGame = true;
         Time.timeScale = 0;
     }
 }

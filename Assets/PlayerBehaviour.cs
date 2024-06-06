@@ -14,7 +14,7 @@ public class PlayerBehaviour : MonoBehaviour
     public GameObject gun;
 
     // Player's stats
-    const int mov_speed = 5;
+    const int mov_speed = 20;
     const int bullet_speed = 1000;
     int Max_HP { get; set; } = 600;
     int HP { get; set; } = 600;
@@ -61,7 +61,7 @@ public class PlayerBehaviour : MonoBehaviour
         if (enemyCount == 0)
         {
             EndPointBehavior.gameObject.SetActive(true);
-            EndPointBehavior.isWinGame = true;
+            EndPointBehavior.isEndGame = true;
         }
     }
 
@@ -135,7 +135,7 @@ public class PlayerBehaviour : MonoBehaviour
         HP -= amount;
         if (HP <= 0)
         {
-            EndPointBehavior.Endgame("You lose");
+            EndPointBehavior.Endgame(false);
         }
     }
     Vector2 ShootingDirection()
@@ -170,7 +170,7 @@ public class PlayerBehaviour : MonoBehaviour
         HP -= amount;
         if (HP <= 0)
         {
-            EndPointBehavior.Endgame("You lose");
+            EndPointBehavior.Endgame(false);
         }
     }
 
