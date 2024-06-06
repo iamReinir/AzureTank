@@ -15,7 +15,7 @@ public class BulletBehaviour : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Entity"))
+        if (collision.gameObject.CompareTag(Const.Tag.player))
         {
             collision.gameObject.SendMessage("apply_dmg", 100, SendMessageOptions.DontRequireReceiver);
             Destroy(gameObject);

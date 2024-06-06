@@ -621,6 +621,8 @@ GameObject:
   - component: {fileID: 154968544}
   - component: {fileID: 154968543}
   - component: {fileID: 154968546}
+  - component: {fileID: 154968550}
+  - component: {fileID: 154968551}
   - component: {fileID: 154968547}
   - component: {fileID: 154968548}
   - component: {fileID: 154968549}
@@ -699,7 +701,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+  m_Sprite: {fileID: 3625043607559282579, guid: 045b15ec09bba42448d89db77fa6f20a, type: 3}
   m_Color: {r: 0.9547169, g: 0.0018083525, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -726,7 +728,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.15, y: -8}
+  m_AnchoredPosition: {x: -6.89, y: 1.42}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &154968546
@@ -828,6 +830,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b32eda02f09c7b409515056af4fdb80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shootCoolDown: 1
+--- !u!114 &154968550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154968541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f2342acd61d3794bb8cc97601cad7e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotation_speed: 10
+  moving_speed: 1000
+--- !u!114 &154968551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154968541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5021da1da62429f4ba97e336c7ba8501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 5729752555523876496, guid: 5aa24a658646ce5488bdb764294e7d88, type: 3}
+  bullet_speed: 10
 --- !u!1 &199726350
 GameObject:
   m_ObjectHideFlags: 0
@@ -1167,7 +1198,7 @@ GameObject:
   - component: {fileID: 225313051}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Entity
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1330,6 +1361,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2342acd61d3794bb8cc97601cad7e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotation_speed: 10
+  moving_speed: 1000
 --- !u!114 &225313053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1868,6 +1901,8 @@ GameObject:
   - component: {fileID: 674145024}
   - component: {fileID: 674145023}
   - component: {fileID: 674145022}
+  - component: {fileID: 674145027}
+  - component: {fileID: 674145026}
   - component: {fileID: 674145021}
   - component: {fileID: 674145020}
   - component: {fileID: 674145019}
@@ -1890,6 +1925,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b32eda02f09c7b409515056af4fdb80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shootCoolDown: 1
 --- !u!58 &674145020
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2045,7 +2081,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+  m_Sprite: {fileID: 3625043607559282579, guid: 045b15ec09bba42448d89db77fa6f20a, type: 3}
   m_Color: {r: 0.9547169, g: 0.0018083525, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2075,6 +2111,34 @@ RectTransform:
   m_AnchoredPosition: {x: -7, y: 17.3}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &674145026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 674145018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f2342acd61d3794bb8cc97601cad7e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotation_speed: 10
+  moving_speed: 1000
+--- !u!114 &674145027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 674145018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5021da1da62429f4ba97e336c7ba8501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 5729752555523876496, guid: 5aa24a658646ce5488bdb764294e7d88, type: 3}
+  bullet_speed: 10
 --- !u!1 &715424577
 GameObject:
   m_ObjectHideFlags: 0
@@ -2409,6 +2473,8 @@ GameObject:
   - component: {fileID: 740728075}
   - component: {fileID: 740728074}
   - component: {fileID: 740728073}
+  - component: {fileID: 740728081}
+  - component: {fileID: 740728080}
   m_Layer: 0
   m_Name: Enemies (4)
   m_TagString: Enemy
@@ -2428,6 +2494,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b32eda02f09c7b409515056af4fdb80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shootCoolDown: 1
 --- !u!58 &740728074
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2613,6 +2680,34 @@ RectTransform:
   m_AnchoredPosition: {x: 11.8, y: 17.7}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &740728080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740728072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5021da1da62429f4ba97e336c7ba8501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 5729752555523876496, guid: 5aa24a658646ce5488bdb764294e7d88, type: 3}
+  bullet_speed: 10
+--- !u!114 &740728081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740728072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f2342acd61d3794bb8cc97601cad7e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotation_speed: 10
+  moving_speed: 1000
 --- !u!1 &764574616
 GameObject:
   m_ObjectHideFlags: 0
@@ -3675,10 +3770,12 @@ GameObject:
   - component: {fileID: 1294840063}
   - component: {fileID: 1294840062}
   - component: {fileID: 1294840061}
+  - component: {fileID: 1294840065}
   - component: {fileID: 1294840060}
+  - component: {fileID: 1294840066}
+  - component: {fileID: 1294840064}
   - component: {fileID: 1294840059}
   - component: {fileID: 1294840058}
-  - component: {fileID: 1294840057}
   m_Layer: 0
   m_Name: Enemies (3)
   m_TagString: Enemy
@@ -3686,18 +3783,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1294840057
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1294840056}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b32eda02f09c7b409515056af4fdb80, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!58 &1294840058
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3883,6 +3968,53 @@ RectTransform:
   m_AnchoredPosition: {x: 4.7, y: 7.12}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1294840064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1294840056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5021da1da62429f4ba97e336c7ba8501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 5729752555523876496, guid: 5aa24a658646ce5488bdb764294e7d88, type: 3}
+  bullet_speed: 10
+--- !u!114 &1294840065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1294840056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f2342acd61d3794bb8cc97601cad7e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotation_speed: 10
+  moving_speed: 1000
+--- !u!114 &1294840066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1294840056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f933b76087c8ba143a6e7ab008720db7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  max_shot: 5
+  shootCoolDown: 0.3
+  radar_range: 20
+  shooting_range: 7
+  moving_speed: 2000
+  bullet_speed: 1200
+  ally_comfort_dist: 1
 --- !u!1 &1326018631
 GameObject:
   m_ObjectHideFlags: 0
@@ -4365,10 +4497,12 @@ GameObject:
   - component: {fileID: 1684461543}
   - component: {fileID: 1684461542}
   - component: {fileID: 1684461541}
-  - component: {fileID: 1684461540}
+  - component: {fileID: 1684461546}
+  - component: {fileID: 1684461544}
   - component: {fileID: 1684461539}
   - component: {fileID: 1684461538}
   - component: {fileID: 1684461537}
+  - component: {fileID: 1684461545}
   m_Layer: 0
   m_Name: Enemies (1)
   m_TagString: Enemy
@@ -4388,6 +4522,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b32eda02f09c7b409515056af4fdb80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shootCoolDown: 1
 --- !u!58 &1684461538
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4458,23 +4593,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &1684461540
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1684461536}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 565ab80b7edb2b84a879e16928ba621c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bullet_prefab: {fileID: 5729752555523876496, guid: 5aa24a658646ce5488bdb764294e7d88, type: 3}
-  target: {fileID: 225313045}
-  bombPickupPrefab: {fileID: 7970867}
-  healthPickupPrefab: {fileID: 364509474}
-  rocketPickupPrefab: {fileID: 72140126}
 --- !u!50 &1684461541
 Rigidbody2D:
   serializedVersion: 4
@@ -4543,7 +4661,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+  m_Sprite: {fileID: 3625043607559282579, guid: 045b15ec09bba42448d89db77fa6f20a, type: 3}
   m_Color: {r: 0.9547169, g: 0.0018083525, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4573,6 +4691,51 @@ RectTransform:
   m_AnchoredPosition: {x: -8.06, y: 4.12}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1684461544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1684461536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f2342acd61d3794bb8cc97601cad7e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotation_speed: 10
+  moving_speed: 1000
+--- !u!114 &1684461545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1684461536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5021da1da62429f4ba97e336c7ba8501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 5729752555523876496, guid: 5aa24a658646ce5488bdb764294e7d88, type: 3}
+  bullet_speed: 10
+--- !u!114 &1684461546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1684461536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 565ab80b7edb2b84a879e16928ba621c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet_prefab: {fileID: 0}
+  target: {fileID: 0}
+  bombPickupPrefab: {fileID: 0}
+  healthPickupPrefab: {fileID: 0}
+  rocketPickupPrefab: {fileID: 0}
 --- !u!1 &1751406414
 GameObject:
   m_ObjectHideFlags: 0

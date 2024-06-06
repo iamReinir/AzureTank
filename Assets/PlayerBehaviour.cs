@@ -14,10 +14,10 @@ public class PlayerBehaviour : MonoBehaviour
     public GameObject gun;
 
     // Player's stats
-    const int mov_speed = 5;
+    const int mov_speed = 1200;
     const int bullet_speed = 1000;
     int Max_HP { get; set; } = 600;
-    int HP { get; set; } = 600;
+    int HP { get; set; } = 6000;
 
     // Enemy count: if enemy number == 0 => win game
     int enemyCount = 0;
@@ -27,6 +27,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     // Helper variables
     Rigidbody2D rig;
+    MovingBehaviour mov;
     
     //Endgame scene
     EndPointBehavior EndPointBehavior { get; set; }
@@ -38,6 +39,9 @@ public class PlayerBehaviour : MonoBehaviour
     private void Start()
     {
         rig = GetComponent<Rigidbody2D>();
+        mov = GetComponent<MovingBehaviour>();
+        mov.moving_speed = mov_speed;
+        gameObject.tag = Const.Tag.player;
         EndPointBehavior = GameObject.FindAnyObjectByType<EndPointBehavior>();
         EndPointBehavior.gameObject.SetActive(false);
     }
@@ -74,7 +78,7 @@ public class PlayerBehaviour : MonoBehaviour
     }
     void Moving_check()
     {
-        Vector2 mov_dir = new Vector2();
+        Vector2 mov_dir = rig.position;
         if (Input.GetKey(Key.LEFT))
         {
             mov_dir += new Vector2
@@ -108,7 +112,7 @@ public class PlayerBehaviour : MonoBehaviour
             });
         }
         if (mov_dir.x != 0 || mov_dir.y != 0)
-            this.SendMessage(MovingBehaviour.toMove, mov_dir / mov_dir.magnitude * mov_speed);
+            mov.HeadingToward(mov_dir);     
     }
 
     void Shooting_check()

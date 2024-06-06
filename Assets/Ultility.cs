@@ -28,4 +28,18 @@ namespace Const
             return pickups[index];
         }
     }
+
+    public static class Tag
+    {
+        public const string player = "Player";
+        public const string entity = "Entity";
+        public const string enemy = "Enemy";
+    }
+
+    public enum Layer
+    {
+        background = 0,
+        subBackground = 1,
+        foreground = 2
+    }
 }
