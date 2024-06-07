@@ -1,4 +1,5 @@
 using Const;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI; // For reloading the scene
@@ -8,22 +9,28 @@ public class PlayerBehaviour : MonoBehaviour
 
     // Dependencies
     public GameObject bullet;
+    public GameObject rocket;
     public GameObject hp_overlay;
     public GameObject gun;
 
     // Player's stats
-    const int mov_speed = 15;
-    const int bullet_speed = 600;
+    const int mov_speed = 1200;
+    const int bullet_speed = 1000;
     int Max_HP { get; set; } = 600;
-    int HP { get; set; } = 600;
+    int HP { get; set; } = 6000;
+
+    // Enemy count: if enemy number == 0 => win game
+    int enemyCount = 0;
+
+    // Rocket count
+    int rocketCount = 0;
 
     // Helper variables
     Rigidbody2D rig;
-
-    // UI elements for Game Over
-    public GameObject gameOverPanel;
-    public Text gameOverText;
-
+    MovingBehaviour mov;
+    
+    //Endgame scene
+    EndPointBehavior EndPointBehavior { get; set; }
 
     // Game state
     public bool isGameOver = false;
@@ -32,10 +39,15 @@ public class PlayerBehaviour : MonoBehaviour
     private void Start()
     {
         rig = GetComponent<Rigidbody2D>();
+        mov = GetComponent<MovingBehaviour>();
+        mov.moving_speed = mov_speed;
+        gameObject.tag = Const.Tag.player;
+        EndPointBehavior = GameObject.FindAnyObjectByType<EndPointBehavior>();
+        EndPointBehavior.gameObject.SetActive(false);
     }
 
     void Update()
-    {                
+    {
         Update_camera();
         Update_gun();
         Moving_check();
@@ -44,23 +56,32 @@ public class PlayerBehaviour : MonoBehaviour
 
     void Update_camera()
     {
-        hp_overlay.SendMessage("display", $"HP : {HP}/{Max_HP}");
+        enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
+        hp_overlay.SendMessage("display", $"HP : {HP}/{Max_HP} " +
+                               $"\nEnemy count : {enemyCount}" +
+                               $"\nRocket count : {rocketCount}");
         hp_overlay.transform.position = this.transform.position + new Vector3(0, 1, -5);
+
+        if (enemyCount == 0)
+        {
+            EndPointBehavior.gameObject.SetActive(true);
+            EndPointBehavior.isWinGame = true;
+        }
     }
 
     void Update_gun()
     {
-        var mouse_pos = ShootingDirection();       
+        var mouse_pos = ShootingDirection();
         var angle = Mathf.Atan2(mouse_pos.y, mouse_pos.x) * Mathf.Rad2Deg;
         gun.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
         gun.transform.position = this.transform.position;
     }
     void Moving_check()
     {
-        Vector2 mov_dir = new Vector2();
+        Vector2 mov_dir = rig.position;
         if (Input.GetKey(Key.LEFT))
         {
-          mov_dir += new Vector2
+            mov_dir += new Vector2
             {
                 x = -mov_speed,
                 y = 0
@@ -90,8 +111,8 @@ public class PlayerBehaviour : MonoBehaviour
                 y = -mov_speed
             });
         }
-        if(mov_dir.x != 0 || mov_dir.y != 0)
-            this.SendMessage(MovingBehaviour.toMove, mov_dir / mov_dir.magnitude * mov_speed);
+        if (mov_dir.x != 0 || mov_dir.y != 0)
+            mov.HeadingToward(mov_dir);     
     }
 
     void Shooting_check()
@@ -103,17 +124,22 @@ public class PlayerBehaviour : MonoBehaviour
             {
                 body = this.gameObject,
                 bullet_prefab = bullet,
+                rocket_prefab = rocket,
                 direction = ShootingDirection() * bullet_speed
             };
             this.SendMessage(TurretBehaviour.toShoot, argument);
+        }
+        if (Input.GetKey(Key.ROCKET))
+        {
+            ShootRocket();
         }
     }
     public void apply_dmg(int amount)
     {
         HP -= amount;
-        if(HP <= 0)
+        if (HP <= 0)
         {
-            Dead();
+            EndPointBehavior.Endgame("You lose");
         }
     }
     Vector2 ShootingDirection()
@@ -146,20 +172,39 @@ public class PlayerBehaviour : MonoBehaviour
     public void DecreaseHP(int amount)
     {
         HP -= amount;
-        if (HP == 0)
+        if (HP <= 0)
         {
-            Dead();
+            EndPointBehavior.Endgame("You lose");
         }
     }
 
-    public void Dead()
+    //Add rocket function
+    public void AddRocket(int quanity)
     {
-        // Display "Game Over" message
-        gameOverPanel.SetActive(true);
-        gameOverText.text = "Game Over";
-        isGameOver = true;
+        rocketCount += quanity;
+    }
 
-        // Stop the game
-        Time.timeScale = 0;
+    private void ShootRocket()
+    {
+        if (rocketCount == 0) { return; }
+        rocketCount -= 1;
+        var enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        foreach (var enemy in enemies)
+        {
+            Enemy_turret enemyTurret = enemy.GetComponent<Enemy_turret>();
+            if (enemyTurret != null)
+            {
+                enemyTurret.Hit(1);
+            }
+        }
+        var argument = new TurretBehaviour.Arg
+        {
+            body = this.gameObject,
+            bullet_prefab = bullet,
+            rocket_prefab = rocket,
+            direction = ShootingDirection() * bullet_speed
+        };
+        this.SendMessage(TurretBehaviour.toShootRocket, argument);
+
     }
 }

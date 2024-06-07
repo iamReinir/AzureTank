@@ -8,6 +8,8 @@ TagManager:
   - Enemy
   - HealthPickup
   - Bomb
+  - Rocket
+  - EndGamePoint
   layers:
   - Default
   - TransparentFX
