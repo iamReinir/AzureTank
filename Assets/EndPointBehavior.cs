@@ -20,7 +20,7 @@ public class EndPointBehavior : MonoBehaviour
             Endgame(true);
         }
     }
-    public void Endgame(Boolean gameResult)
+    public void Endgame(Boolean isWin)
     {
 
         intervention.SetActive(true);
