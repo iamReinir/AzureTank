@@ -1,0 +1,1813 @@
+fileFormatVersion: 2
+guid: ede7d5a1ba906f04aafb5490ac13f979
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 31
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_1
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 438
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c35d7ecca0890a64c9ea6f8e32de13ed
+      internalID: 248510345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_2
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 438
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1507b01e09001744933868f60318844
+      internalID: 1058544862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_3
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 438
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 280c0431d69522d49b2354ed7b59a60d
+      internalID: 1176385725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_4
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 438
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c57e117b5686ee54695bc7d0eaefd9a6
+      internalID: 1110257129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_6
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 351
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4f20330d94ee0f4b8ca99d90c009a27
+      internalID: 2125666382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_9
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 439
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c30825dbb4c352042a6f97810a0a204f
+      internalID: -1720006843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_10
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 439
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9614feea70323904b8a8fbb523a856b5
+      internalID: 314304543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_11
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 404
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ad023fbb857bd8429fd9790680609af
+      internalID: 2006018672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_13
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 404
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bcee259864295f40beba625a79c38fb
+      internalID: 1649836317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_14
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 404
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c6ecaba5feda0546aff0ae8204eacd9
+      internalID: 521845164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_15
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 404
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d599a39943b5bc5479121d10469a06f9
+      internalID: 600095938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_21
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 405
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8a38a165827c2048ae0498be74417da
+      internalID: -345070167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_22
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 405
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c937fb19bbc013c448a4b272c7c6d87b
+      internalID: -636882849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_23
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 370
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7be66694fb012634ca16b1d566711520
+      internalID: 1126886350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_24
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 370
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d0e42d5f32529647a222c1b90a1a444
+      internalID: -1351108520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_25
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 370
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65cac6c624604d64383d07f279ea46f5
+      internalID: -1747112652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_26
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 370
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acd7d42fdec963545be4d12799ad6782
+      internalID: -471171001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_32
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 366
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2b10cb0c80c44544818c4ab44d76f4e
+      internalID: 225790213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_33
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 366
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c039d07c30fe6354f85b0e054768e3f8
+      internalID: 1886391832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_34
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 336
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ce265de41756694a82a46597475f33e
+      internalID: 321045129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_35
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 336
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e28e92fb5410a154980d3f4b83f64602
+      internalID: 1823039454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_36
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 336
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fc13572a5d2c0d45a570131eb8c49bc
+      internalID: -1525877658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_37
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 336
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48699b3d39aa9c840a440938e34047cc
+      internalID: -1881755743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_38
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 336
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b483dfb407f534e49b814b13e4715d99
+      internalID: 431806668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_45
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 302
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89ee6bbe9bc462149b1f1da54554febc
+      internalID: 1628170992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_46
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 302
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c95b51f968a026242a0ecb7c0cda9039
+      internalID: 1058220032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_47
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 302
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c47ee1574ef2b3438cab6d6c7c3535f
+      internalID: 199548401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_48
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 302
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 837af1015a600db4bad416adbad40511
+      internalID: 1334956129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_49
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 302
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29bae9283539f864fb76e6118159ae18
+      internalID: -1013385718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_51
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 268
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9fb6de325b8c034c8b9cdc84359ff36
+      internalID: -1796124715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_52
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 268
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c747d558ae4ab044945b5de82e71cec
+      internalID: 438935044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_53
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 268
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a8492584c55401459615557dfb89273
+      internalID: -1797825098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_54
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 268
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecc0ca2c6193c704095470b627103956
+      internalID: 1721957826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_55
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 268
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12bb07afc1dda454982b9ecaebbe55c7
+      internalID: -727468966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_58
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 258
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ee5335018619c7458ab1606fbe74913
+      internalID: 1839559026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_60
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 274
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2fb0d43e9a2b69489d3c268a0fe5c7c
+      internalID: 78384142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_63
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 268
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23e89dbe686a25040864d015af16c970
+      internalID: -1860747882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_68
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 224
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 979243e45f09f6c4bbaaaa133773cde9
+      internalID: -1816358820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_70
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 224
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab4f3f6645c703544b2cab8bad3d8c79
+      internalID: 1813088328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_71
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 224
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50291699a202f1041b61d3a274354b8c
+      internalID: -1500563455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_72
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 240
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e94969b4a3eea743b957b8a8f5b9e69
+      internalID: 50101302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_75
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 234
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 643c6347acf49f84798102518e127af6
+      internalID: -1634146065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_77
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 190
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 298652d5d9ec5a443a229960e5a08a3e
+      internalID: 1566378966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_79
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 190
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 596eae1039a993b44b53c8a4a831786e
+      internalID: 874889180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_92
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 100
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4131f3ddf237ea41a09eb9d9d0deb18
+      internalID: 1384687682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_93
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 100
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a5746035c11e224d8740dd1b15e3701
+      internalID: 1915720418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_94
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 100
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77d31f7feace40b48b359da1e4d14785
+      internalID: -826097461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_100
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 90
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 679342a555bfc6f498c7f1215a7c3428
+      internalID: -2036574773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_101
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 90
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a963fbb83da1d64cb2f4641032ccaba
+      internalID: -820879309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_102
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 90
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fdc96cf43809c447a5ea2a53687a0d6
+      internalID: 176721873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_103
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 90
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38fb4f74f51b22646bcbba8306d4c071
+      internalID: -445163594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_104
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 66
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a7235a046df8f04e9c06acb63f92fa0
+      internalID: 1841908531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_105
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 66
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b947150677bbacc4b831571585551803
+      internalID: -157892481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_106
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 66
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78a55fd456ca0764490f561b3eb1fadf
+      internalID: -595128087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_109
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 72
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b9c09feaebff304197df7de7bd82520
+      internalID: 704975500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_112
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 72
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f3784feb68a35345b5f38524a65b114
+      internalID: -1541026978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_114
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 56
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90a10db077a3c6c4eba53d85000682f4
+      internalID: 696043476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_115
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 56
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 920c0d51e1ee08c47bb3ed1e470618e2
+      internalID: 1616705964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_116
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 90
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39291ed162408fb468457a676ea6dffa
+      internalID: -1945971783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_117
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 56
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d46601f3cc9ed2418b6a246ab45a613
+      internalID: -446731224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_118
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 56
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f98babfb3d2f7346a4c13eacc33d16f
+      internalID: 15465363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_119
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 32
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 586c9ce8d26a47f4eba707cb4c8c85fe
+      internalID: -136692962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_120
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 32
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a9feb7b61fd2fa4281183183cbf3ad5
+      internalID: 2017776844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_7
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 419
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32d645c3fe2d24d4fadada86d6e05235
+      internalID: 1888304122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_19
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 385
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a66b4a2bc07464f4cb4b0590bedffe89
+      internalID: -1507199788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_56
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 258
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c1a359b8d3edb94b815f001413e84d0
+      internalID: -1344669015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_69
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 258
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e185cbb8f55f6a49ba2a47c9bc435ce
+      internalID: -595723189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_78
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 190
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfc88e3af61d7494dbc4355c7f72bf2b
+      internalID: 1338332588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_0
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 438
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4058e594fe36bfd47874d3f984f4b636
+      internalID: 169946042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_12
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 404
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b83253a46476e9429971f76505c67db
+      internalID: 685297126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_5
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 32
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 958c3d923e7468941bb4354803bbbc7c
+      internalID: 403315752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_8
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 348
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e012379dfc124c54c8ea16db179224b3
+      internalID: -1194924542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_16
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 382
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e76435ebcbf218e47afb808aee6488b3
+      internalID: -1887922707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_17
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 416
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 609a3cad44bde814a84eda1c2575837c
+      internalID: 832238866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff_tileset-removebg-preview_18
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 223
+        width: 65
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91edbac44967f9b4faf7300e83af4dc4
+      internalID: 797107231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Cliff_tileset-removebg-preview_0: 169946042
+      Cliff_tileset-removebg-preview_1: 248510345
+      Cliff_tileset-removebg-preview_10: 314304543
+      Cliff_tileset-removebg-preview_100: -2036574773
+      Cliff_tileset-removebg-preview_101: -820879309
+      Cliff_tileset-removebg-preview_102: 176721873
+      Cliff_tileset-removebg-preview_103: -445163594
+      Cliff_tileset-removebg-preview_104: 1841908531
+      Cliff_tileset-removebg-preview_105: -157892481
+      Cliff_tileset-removebg-preview_106: -595128087
+      Cliff_tileset-removebg-preview_107: 2070339644
+      Cliff_tileset-removebg-preview_108: 205607261
+      Cliff_tileset-removebg-preview_109: 704975500
+      Cliff_tileset-removebg-preview_11: 2006018672
+      Cliff_tileset-removebg-preview_110: 35805238
+      Cliff_tileset-removebg-preview_111: -1204436428
+      Cliff_tileset-removebg-preview_112: -1541026978
+      Cliff_tileset-removebg-preview_113: 1753829967
+      Cliff_tileset-removebg-preview_114: 696043476
+      Cliff_tileset-removebg-preview_115: 1616705964
+      Cliff_tileset-removebg-preview_116: -1945971783
+      Cliff_tileset-removebg-preview_117: -446731224
+      Cliff_tileset-removebg-preview_118: 15465363
+      Cliff_tileset-removebg-preview_119: -136692962
+      Cliff_tileset-removebg-preview_12: 685297126
+      Cliff_tileset-removebg-preview_120: 2017776844
+      Cliff_tileset-removebg-preview_121: -1103890283
+      Cliff_tileset-removebg-preview_122: 1729880582
+      Cliff_tileset-removebg-preview_123: -1936382928
+      Cliff_tileset-removebg-preview_13: 1649836317
+      Cliff_tileset-removebg-preview_14: 521845164
+      Cliff_tileset-removebg-preview_15: 600095938
+      Cliff_tileset-removebg-preview_16: -1887922707
+      Cliff_tileset-removebg-preview_17: 832238866
+      Cliff_tileset-removebg-preview_18: 797107231
+      Cliff_tileset-removebg-preview_19: -1507199788
+      Cliff_tileset-removebg-preview_2: 1058544862
+      Cliff_tileset-removebg-preview_20: 648078363
+      Cliff_tileset-removebg-preview_21: -345070167
+      Cliff_tileset-removebg-preview_22: -636882849
+      Cliff_tileset-removebg-preview_23: 1126886350
+      Cliff_tileset-removebg-preview_24: -1351108520
+      Cliff_tileset-removebg-preview_25: -1747112652
+      Cliff_tileset-removebg-preview_26: -471171001
+      Cliff_tileset-removebg-preview_27: 1967768262
+      Cliff_tileset-removebg-preview_28: 1711198979
+      Cliff_tileset-removebg-preview_29: -661410179
+      Cliff_tileset-removebg-preview_3: 1176385725
+      Cliff_tileset-removebg-preview_30: -645571231
+      Cliff_tileset-removebg-preview_31: 649860
+      Cliff_tileset-removebg-preview_32: 225790213
+      Cliff_tileset-removebg-preview_33: 1886391832
+      Cliff_tileset-removebg-preview_34: 321045129
+      Cliff_tileset-removebg-preview_35: 1823039454
+      Cliff_tileset-removebg-preview_36: -1525877658
+      Cliff_tileset-removebg-preview_37: -1881755743
+      Cliff_tileset-removebg-preview_38: 431806668
+      Cliff_tileset-removebg-preview_39: -1980453277
+      Cliff_tileset-removebg-preview_4: 1110257129
+      Cliff_tileset-removebg-preview_40: 1609520767
+      Cliff_tileset-removebg-preview_41: 1446198581
+      Cliff_tileset-removebg-preview_42: 1362127186
+      Cliff_tileset-removebg-preview_43: 1191103326
+      Cliff_tileset-removebg-preview_44: -1088273823
+      Cliff_tileset-removebg-preview_45: 1628170992
+      Cliff_tileset-removebg-preview_46: 1058220032
+      Cliff_tileset-removebg-preview_47: 199548401
+      Cliff_tileset-removebg-preview_48: 1334956129
+      Cliff_tileset-removebg-preview_49: -1013385718
+      Cliff_tileset-removebg-preview_5: 403315752
+      Cliff_tileset-removebg-preview_50: 484251482
+      Cliff_tileset-removebg-preview_51: -1796124715
+      Cliff_tileset-removebg-preview_52: 438935044
+      Cliff_tileset-removebg-preview_53: -1797825098
+      Cliff_tileset-removebg-preview_54: 1721957826
+      Cliff_tileset-removebg-preview_55: -727468966
+      Cliff_tileset-removebg-preview_56: -1344669015
+      Cliff_tileset-removebg-preview_57: -1292683094
+      Cliff_tileset-removebg-preview_58: 1839559026
+      Cliff_tileset-removebg-preview_59: 1272493559
+      Cliff_tileset-removebg-preview_6: 2125666382
+      Cliff_tileset-removebg-preview_60: 78384142
+      Cliff_tileset-removebg-preview_61: -723909950
+      Cliff_tileset-removebg-preview_62: 1378706158
+      Cliff_tileset-removebg-preview_63: -1860747882
+      Cliff_tileset-removebg-preview_64: 218248087
+      Cliff_tileset-removebg-preview_65: -1352152704
+      Cliff_tileset-removebg-preview_66: 342214447
+      Cliff_tileset-removebg-preview_67: -1201997316
+      Cliff_tileset-removebg-preview_68: -1816358820
+      Cliff_tileset-removebg-preview_69: -595723189
+      Cliff_tileset-removebg-preview_7: 1888304122
+      Cliff_tileset-removebg-preview_70: 1813088328
+      Cliff_tileset-removebg-preview_71: -1500563455
+      Cliff_tileset-removebg-preview_72: 50101302
+      Cliff_tileset-removebg-preview_73: -949378911
+      Cliff_tileset-removebg-preview_74: 1662159060
+      Cliff_tileset-removebg-preview_75: -1634146065
+      Cliff_tileset-removebg-preview_76: -1011332557
+      Cliff_tileset-removebg-preview_77: 1566378966
+      Cliff_tileset-removebg-preview_78: 1338332588
+      Cliff_tileset-removebg-preview_79: 874889180
+      Cliff_tileset-removebg-preview_8: -1194924542
+      Cliff_tileset-removebg-preview_80: -93774389
+      Cliff_tileset-removebg-preview_81: -1822307028
+      Cliff_tileset-removebg-preview_82: 199944575
+      Cliff_tileset-removebg-preview_83: -933538965
+      Cliff_tileset-removebg-preview_84: -1476235436
+      Cliff_tileset-removebg-preview_85: 211703557
+      Cliff_tileset-removebg-preview_86: -1734056082
+      Cliff_tileset-removebg-preview_87: -1600084985
+      Cliff_tileset-removebg-preview_88: -1814575007
+      Cliff_tileset-removebg-preview_89: 872437546
+      Cliff_tileset-removebg-preview_9: -1720006843
+      Cliff_tileset-removebg-preview_90: -2040851436
+      Cliff_tileset-removebg-preview_91: 1094015830
+      Cliff_tileset-removebg-preview_92: 1384687682
+      Cliff_tileset-removebg-preview_93: 1915720418
+      Cliff_tileset-removebg-preview_94: -826097461
+      Cliff_tileset-removebg-preview_95: 635010371
+      Cliff_tileset-removebg-preview_96: 1430399852
+      Cliff_tileset-removebg-preview_97: -269192885
+      Cliff_tileset-removebg-preview_98: 1969023660
+      Cliff_tileset-removebg-preview_99: -1547391655
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
