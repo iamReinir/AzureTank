@@ -6,6 +6,7 @@ public class BulletBehaviour : MonoBehaviour
     float live_time = 0.8f;
     void Start()
     {
+        GetComponent<SpriteRenderer>().sortingOrder = Const.Layer.bullet;
         Destroy(gameObject, live_time);
     }
 

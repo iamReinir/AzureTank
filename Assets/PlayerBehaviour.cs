@@ -28,9 +28,6 @@ public class PlayerBehaviour : MonoBehaviour
     // Helper variables
     Rigidbody2D rig;
     MovingBehaviour mov;
-    
-    //Endgame scene
-    EndPointBehavior EndPointBehavior { get; set; }
 
     // Game state
     public bool isGameOver = false;
@@ -38,12 +35,12 @@ public class PlayerBehaviour : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
+        GetComponent<SpriteRenderer>().sortingOrder = Layer.body;
+        gun.GetComponent<SpriteRenderer>().sortingOrder= Layer.turret;
         rig = GetComponent<Rigidbody2D>();
         mov = GetComponent<MovingBehaviour>();
         mov.moving_speed = mov_speed;
-        gameObject.tag = Const.Tag.player;
-        EndPointBehavior = GameObject.FindAnyObjectByType<EndPointBehavior>();
-        EndPointBehavior.gameObject.SetActive(false);
+        gameObject.tag = Tag.player;
     }
 
     void Update()
@@ -64,8 +61,8 @@ public class PlayerBehaviour : MonoBehaviour
 
         if (enemyCount == 0)
         {
-            EndPointBehavior.gameObject.SetActive(true);
-            EndPointBehavior.isWinGame = true;
+            //EndPointBehavior.gameObject.SetActive(true);
+            //EndPointBehavior.isWinGame = true;
         }
     }
 
@@ -139,7 +136,8 @@ public class PlayerBehaviour : MonoBehaviour
         HP -= amount;
         if (HP <= 0)
         {
-            EndPointBehavior.Endgame("You lose");
+            Time.timeScale = 0;
+            //EndPointBehavior.Endgame("You lose");
         }
     }
     Vector2 ShootingDirection()
@@ -174,7 +172,8 @@ public class PlayerBehaviour : MonoBehaviour
         HP -= amount;
         if (HP <= 0)
         {
-            EndPointBehavior.Endgame("You lose");
+            Time.timeScale = 0;
+            //EndPointBehavior.Endgame("You lose");
         }
     }
 
