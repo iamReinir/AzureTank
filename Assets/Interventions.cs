@@ -42,7 +42,6 @@ public class Interventions : MonoBehaviour
 
     public void RestartScene()
     {
-        // Tải lại scene hiện tại
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         EndPointBehavior.isEndGame = false;
         Time.timeScale = 1f;
