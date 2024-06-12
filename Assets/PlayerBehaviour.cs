@@ -1,4 +1,5 @@
 using Const;
+using System;
 using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -14,10 +15,12 @@ public class PlayerBehaviour : MonoBehaviour
     public GameObject gun;
 
     // Player's stats
-    const int mov_speed = 1200;
-    const int bullet_speed = 1000;
-    int Max_HP { get; set; } = 600;
-    int HP { get; set; } = 6000;
+    int mov_speed = 1200;
+    int bullet_speed = 1000;
+    double Max_HP { get; set; } = 600;
+    double HP { get; set; } = 600;
+    double Current_Exp { get; set; } = 0;
+    double Max_Exp { get; set; } = 3;
 
     // Enemy count: if enemy number == 0 => win game
     int enemyCount = 0;
@@ -28,7 +31,7 @@ public class PlayerBehaviour : MonoBehaviour
     // Helper variables
     Rigidbody2D rig;
     MovingBehaviour mov;
-    
+
     //Endgame scene
     EndPointBehavior EndPointBehavior { get; set; }
 
@@ -59,7 +62,9 @@ public class PlayerBehaviour : MonoBehaviour
         enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
         hp_overlay.SendMessage("display", $"HP : {HP}/{Max_HP} " +
                                $"\nEnemy count : {enemyCount}" +
-                               $"\nRocket count : {rocketCount}");
+                               $"\nRocket count : {rocketCount}" +
+                               $"\nExp : {Current_Exp}/{Max_Exp}" +
+                               $"\n Move Speed {mov_speed}");
         hp_overlay.transform.position = this.transform.position + new Vector3(0, 1, -5);
 
         if (enemyCount == 0)
@@ -112,7 +117,7 @@ public class PlayerBehaviour : MonoBehaviour
             });
         }
         if (mov_dir.x != 0 || mov_dir.y != 0)
-            mov.HeadingToward(mov_dir);     
+            mov.HeadingToward(mov_dir);
     }
 
     void Shooting_check()
@@ -205,6 +210,30 @@ public class PlayerBehaviour : MonoBehaviour
             direction = ShootingDirection() * bullet_speed
         };
         this.SendMessage(TurretBehaviour.toShootRocket, argument);
+    }
 
+    public void LvUP()
+    {
+        Current_Exp += 1;
+        if (Current_Exp >= Max_Exp)
+        {
+            Max_HP = Math.Floor(Max_HP * 1.2);
+            mov_speed += 100;
+            bullet_speed += 100;
+            rocketCount += 1;
+            HP += 50;
+            Current_Exp = 0;
+            Max_Exp = Math.Floor(Max_Exp * 1.2);
+        }
+    }
+
+    public void EnterSwamp()
+    {
+        mov_speed /= 2;
+    }
+
+    public void ExitSwamp()
+    {
+        mov_speed *= 2;
     }
 }
