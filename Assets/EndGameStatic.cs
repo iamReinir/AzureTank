@@ -5,13 +5,13 @@ using UnityEngine;
 
 public class EndGameStatic : MonoBehaviour
 {
-    public TMP_Text timeCounter;
+    public TMP_Text totalPlayTime;
     public TMP_Text endGameTitle;
 
 
     void Start()
     {
-        timeCounter.text = TimeCounter.time;
+        totalPlayTime.text  = TimeCounter.GameDuration;
         TimeCounter.StopTimer();
     }
 }
