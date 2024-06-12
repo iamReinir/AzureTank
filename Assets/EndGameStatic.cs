@@ -6,8 +6,6 @@ using UnityEngine;
 public class EndGameStatic : MonoBehaviour
 {
     public TMP_Text totalPlayTime;
-    public TMP_Text endGameTitle;
-
 
     void Start()
     {
