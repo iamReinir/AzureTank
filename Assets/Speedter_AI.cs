@@ -118,7 +118,8 @@ class Speeter_AI : MonoBehaviour
         {
             shoot_count = 0;
             run_target = - 1.5f * (target.position - rig.position) + rig.position;
-            current_state = State.run;            
+            current_state = State.run;
+            cur_wait_time = wait_time * 2;
         }
     }
 
@@ -136,13 +137,17 @@ class Speeter_AI : MonoBehaviour
 
     void Run()
     {
+        cur_wait_time -= Time.deltaTime;
         if (Vector2.Distance(rig.position, run_target) > 0.1f)
         {
             body.HeadingToward(run_target);
-            return;
+            if (cur_wait_time > 0)            
+                return;
         }
+        
         current_state= State.idle;
         target = null;
+        cur_wait_time = 0;
     }
     void Radar()
     {

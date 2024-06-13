@@ -36,10 +36,23 @@ namespace Const
         public const string enemy = "Enemy";
     }
 
-    public enum Layer
+    public class Layer
     {
-        background = 0,
-        subBackground = 1,
-        foreground = 2
+        public const int data = 0;
+        public const int background = 1;
+        public const int subBackground = 2;
+        public const int bullet = 6;
+        public const int body = 6;
+        public const int turret = 7;
+    }
+
+    public static class Scence
+    {
+        public const string CHAP1_1 = "Chapter1.1";
+        public const string CHAP1_2 = "Chapter1.2";
+        public const string CHAP1_3 = "Chapter1.3";
+        public const string CHAP1_4 = "Chapter1.4";
+        public const string CHAP1_5 = "Chapter1.5";
+        public const string CHAP1_6 = "Chapter1.6";
     }
 }

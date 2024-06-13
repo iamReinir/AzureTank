@@ -16,7 +16,7 @@ public class PlayerBehaviour : MonoBehaviour
     // Player's stats
     const int mov_speed = 1200;
     const int bullet_speed = 1000;
-    int Max_HP { get; set; } = 600;
+    int Max_HP { get; set; } = 6000;
     int HP { get; set; } = 6000;
 
     // Enemy count: if enemy number == 0 => win game
@@ -28,9 +28,6 @@ public class PlayerBehaviour : MonoBehaviour
     // Helper variables
     Rigidbody2D rig;
     MovingBehaviour mov;
-    
-    //Endgame scene
-    EndPointBehavior EndPointBehavior { get; set; }
 
     // Game state
     public bool isGameOver = false;
@@ -38,12 +35,15 @@ public class PlayerBehaviour : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
+        GetComponent<CannonMounted>().bullet_speed = 1000;
+        GetComponent<SpriteRenderer>().sortingOrder = Layer.body;
+        gun.GetComponent<SpriteRenderer>().sortingOrder= Layer.turret;
         rig = GetComponent<Rigidbody2D>();
         mov = GetComponent<MovingBehaviour>();
         mov.moving_speed = mov_speed;
-        gameObject.tag = Const.Tag.player;
-        EndPointBehavior = GameObject.FindAnyObjectByType<EndPointBehavior>();
-        EndPointBehavior.gameObject.SetActive(false);
+        gameObject.tag = Tag.player;
+        DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(gun);
     }
 
     void Update()
@@ -64,8 +64,8 @@ public class PlayerBehaviour : MonoBehaviour
 
         if (enemyCount == 0)
         {
-            EndPointBehavior.gameObject.SetActive(true);
-            EndPointBehavior.isWinGame = true;
+            //EndPointBehavior.gameObject.SetActive(true);
+            //EndPointBehavior.isWinGame = true;
         }
     }
 
@@ -79,8 +79,10 @@ public class PlayerBehaviour : MonoBehaviour
     void Moving_check()
     {
         Vector2 mov_dir = rig.position;
+        bool moved = false;
         if (Input.GetKey(Key.LEFT))
         {
+            moved = true;
             mov_dir += new Vector2
             {
                 x = -mov_speed,
@@ -89,6 +91,7 @@ public class PlayerBehaviour : MonoBehaviour
         }
         if (Input.GetKey(Key.RIGHT))
         {
+            moved = true;
             mov_dir += (new Vector2
             {
                 x = mov_speed,
@@ -97,6 +100,7 @@ public class PlayerBehaviour : MonoBehaviour
         }
         if (Input.GetKey(Key.UP))
         {
+            moved = true;
             mov_dir += (new Vector2
             {
                 x = 0,
@@ -105,13 +109,14 @@ public class PlayerBehaviour : MonoBehaviour
         }
         if (Input.GetKey(Key.DOWN))
         {
+            moved = true;
             mov_dir += (new Vector2
             {
                 x = 0,
                 y = -mov_speed
             });
         }
-        if (mov_dir.x != 0 || mov_dir.y != 0)
+        if (moved)
             mov.HeadingToward(mov_dir);     
     }
 
@@ -120,14 +125,8 @@ public class PlayerBehaviour : MonoBehaviour
         if (isGameOver) return;
         if (Input.GetMouseButtonDown(0))
         {
-            var argument = new TurretBehaviour.Arg
-            {
-                body = this.gameObject,
-                bullet_prefab = bullet,
-                rocket_prefab = rocket,
-                direction = ShootingDirection() * bullet_speed
-            };
-            this.SendMessage(TurretBehaviour.toShoot, argument);
+            var pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            GetComponent<CannonMounted>().Shoot_at(pos);
         }
         if (Input.GetKey(Key.ROCKET))
         {
@@ -139,7 +138,8 @@ public class PlayerBehaviour : MonoBehaviour
         HP -= amount;
         if (HP <= 0)
         {
-            EndPointBehavior.Endgame("You lose");
+            Time.timeScale = 0;
+            //EndPointBehavior.Endgame("You lose");
         }
     }
     Vector2 ShootingDirection()
@@ -174,7 +174,8 @@ public class PlayerBehaviour : MonoBehaviour
         HP -= amount;
         if (HP <= 0)
         {
-            EndPointBehavior.Endgame("You lose");
+            Time.timeScale = 0;
+            //EndPointBehavior.Endgame("You lose");
         }
     }
 

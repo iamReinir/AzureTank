@@ -45,7 +45,7 @@ public class Enemy_turret : MonoBehaviour
         ApplyDame(dame);
     }
 
-    private void ApplyDame(int dame)
+    public void ApplyDame(int dame)
     {
         if (spriteRenderer == null)
         {
