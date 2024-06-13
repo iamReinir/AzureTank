@@ -4,27 +4,37 @@ public class BulletBehaviour : MonoBehaviour
 {
     // Start is called before the first frame update
     float live_time = 0.8f;
+    public int damage = 100;
+    public string side;
     void Start()
     {
         GetComponent<SpriteRenderer>().sortingOrder = Const.Layer.bullet;
         Destroy(gameObject, live_time);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag(Const.Tag.player))
+        if (collision.isTrigger == true)
+            return;
+        if (collision.gameObject.GetComponent<StopBullet>() != null)
         {
-            collision.gameObject.SendMessage("apply_dmg", 100, SendMessageOptions.DontRequireReceiver);
             Destroy(gameObject);
+            return;
         }
-        if (collision.gameObject.CompareTag("Enemy"))
+        var player = collision.gameObject.GetComponent<PlayerBehaviour>();
+        if (player != null && collision.CompareTag(side) == false)
         {
-            collision.gameObject.SendMessage("Hit", 1, SendMessageOptions.DontRequireReceiver);
+            player.apply_dmg(damage);
             Destroy(gameObject);
+            return;
+        }
+        var enemy = collision.gameObject.GetComponent<Enemy_turret>();
+        if (enemy != null && collision.CompareTag(side) == false)
+        {
+            enemy.ApplyDame(1);
+            Destroy(gameObject);
+            return;
+
         }
     }
 }

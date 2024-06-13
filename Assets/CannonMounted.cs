@@ -3,23 +3,25 @@
 class CannonMounted : MonoBehaviour
 {
     public GameObject bullet;
-    public int bullet_speed = 10;
+    public int bullet_speed = 1000;
     GameObject body;
 
     private void Start()
     {
         body = gameObject;
-        if (bullet == null)
-            bullet = GameObject.Find("Bullet");
     }
     public void Shoot_toward(Vector2 direction)
-    {        
+    {
+        if (bullet == null)
+            return;
         var radius = body.GetComponent<CircleCollider2D>().radius 
-            + bullet.GetComponent<CircleCollider2D>().radius + 1f;
+            + bullet.GetComponent<CircleCollider2D>().radius + 1.1f;
         var cur_pos = body.GetComponent<Rigidbody2D>().position;
         var dir = direction / direction.magnitude;
-        var bul = Instantiate(bullet, cur_pos + dir * radius, Quaternion.identity);
-        bul.GetComponent<Rigidbody2D>().AddForce(direction);
+        bullet.GetComponent<BulletBehaviour>().tag = gameObject.tag;
+        Instantiate(bullet, cur_pos + dir * radius, Quaternion.identity)
+            .GetComponent<Rigidbody2D>()
+            .AddForce(direction);        
     }
 
     public void Shoot_at(Vector2 target)
