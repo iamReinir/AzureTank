@@ -2,6 +2,7 @@
 using Const;
 using System;
 using System.Collections.Generic;
+using System.Net.Sockets;
 using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -57,7 +58,7 @@ public class Enemy_turret : MonoBehaviour
         }
         switch (hp)
         {
-            case 0: { DropItem(); Destroy(gameObject); break; }
+            case 0: { DropItem(); Destroy(gameObject); LvUp() ; break; }
             case 1: spriteRenderer.color = Color.gray; break;
             case 2: spriteRenderer.color = Color.yellow; break;
         }
@@ -84,6 +85,13 @@ public class Enemy_turret : MonoBehaviour
         {
             GameObject pickup = helper.GetRandomPickup(validPickups.ToArray());
             Instantiate(pickup, transform.position, Quaternion.identity);
+        }
+    }
+    private void LvUp()
+    {
+        if(player != null)
+        {
+            player.LvUP();
         }
     }
 }
