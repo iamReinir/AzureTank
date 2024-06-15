@@ -4,7 +4,6 @@ public class TurretBehaviour : MonoBehaviour
 {
     public const string toShoot = "Shoot";
     public const string toShootRocket = "ShootRocket";
-
     public class Arg
     {
         public GameObject bullet_prefab;
@@ -12,7 +11,7 @@ public class TurretBehaviour : MonoBehaviour
         public GameObject body;
         public Vector2 direction;
     }
-    private void Shoot(Arg arg)
+    public void Shoot(Arg arg)
     {
         var radius = arg.body.GetComponent<CircleCollider2D>().radius 
             + arg.bullet_prefab.GetComponent<CircleCollider2D>().radius + 1f;
@@ -31,5 +30,16 @@ public class TurretBehaviour : MonoBehaviour
         bullet.GetComponent<Rigidbody2D>().AddForce(arg.direction);
 
         Destroy(bullet, .2f);
+    }
+
+    public void Shoot(Vector2 target, GameObject body, GameObject bullet)
+    {        
+        Vector2 body_pos = body.transform.position;
+        Shoot(new Arg
+        {
+            body = body,
+            direction = target - body_pos,
+            bullet_prefab = bullet,
+        });
     }
 }

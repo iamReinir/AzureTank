@@ -2,7 +2,12 @@ using UnityEngine;
 
 public class FollowPlayer : MonoBehaviour
 {
-    public Transform player;
+    Transform player;
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag(Const.Tag.player).transform;
+        DontDestroyOnLoad(gameObject);
+    }
 
     // Update is called once per frame
     void Update()

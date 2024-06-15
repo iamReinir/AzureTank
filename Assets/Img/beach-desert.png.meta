@@ -1,0 +1,410 @@
+fileFormatVersion: 2
+guid: c505fcfd83a3d9c48be138e405ccb0da
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 193, y: 126, z: 797, w: 864}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: beach-desert_52
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 761
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a0424ef3247694468c0ace5c4f4eaf0
+      internalID: -2139538284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_108
+      rect:
+        serializedVersion: 2
+        x: 965
+        y: 992
+        width: 52
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c4d7083503670a429c12c32dfb98a0e
+      internalID: 556495541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_109
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 965
+        width: 41
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87e3171d4ce3baf4a80abffa97c5c1ed
+      internalID: 2068110359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_121
+      rect:
+        serializedVersion: 2
+        x: 970
+        y: 947
+        width: 48
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70890bb441ee3104d8d1f01b01118a71
+      internalID: 1143450918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_187
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 125
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41da16f5b61127d439f5029420ee34cf
+      internalID: -1849284366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 1537655665
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      beach-desert_0: 1413253397
+      beach-desert_1: -450421631
+      beach-desert_10: -1357216386
+      beach-desert_100: 1401831170
+      beach-desert_101: -1544044192
+      beach-desert_102: -408237583
+      beach-desert_103: -2073681974
+      beach-desert_104: -260953518
+      beach-desert_105: 1835239185
+      beach-desert_106: 2039453389
+      beach-desert_107: -697790292
+      beach-desert_108: 556495541
+      beach-desert_109: 2068110359
+      beach-desert_11: -1663586040
+      beach-desert_110: -410354301
+      beach-desert_111: 1057702508
+      beach-desert_112: 1728681905
+      beach-desert_113: -91986731
+      beach-desert_114: 816062910
+      beach-desert_115: 184132172
+      beach-desert_116: 883836720
+      beach-desert_117: -1535313078
+      beach-desert_118: -819150619
+      beach-desert_119: 457328058
+      beach-desert_12: -1698763304
+      beach-desert_120: 311864692
+      beach-desert_121: 1143450918
+      beach-desert_122: -1333261830
+      beach-desert_123: 860581302
+      beach-desert_124: 766212079
+      beach-desert_125: -462080973
+      beach-desert_126: 1217265244
+      beach-desert_127: 789600002
+      beach-desert_128: -458883281
+      beach-desert_129: -418611007
+      beach-desert_13: 517091057
+      beach-desert_130: -59693389
+      beach-desert_131: 672964690
+      beach-desert_132: 19376728
+      beach-desert_133: 1984614834
+      beach-desert_134: 254117753
+      beach-desert_135: -1216636683
+      beach-desert_136: -1525306129
+      beach-desert_137: 1428103681
+      beach-desert_138: -590579246
+      beach-desert_139: -427167625
+      beach-desert_14: -702828584
+      beach-desert_140: 1134753174
+      beach-desert_141: -941167825
+      beach-desert_142: 717092698
+      beach-desert_143: -1944481513
+      beach-desert_144: 1725925027
+      beach-desert_145: 1159201815
+      beach-desert_146: -253860841
+      beach-desert_147: -55396353
+      beach-desert_148: -865127545
+      beach-desert_149: 1907867659
+      beach-desert_15: 97357784
+      beach-desert_150: 1126264212
+      beach-desert_151: 1955206271
+      beach-desert_152: -1509838354
+      beach-desert_153: -466702600
+      beach-desert_154: -1970742517
+      beach-desert_155: 1667454574
+      beach-desert_156: 813663428
+      beach-desert_157: -2048328257
+      beach-desert_158: -1146544885
+      beach-desert_159: -1328896379
+      beach-desert_16: 1005993179
+      beach-desert_160: 689976536
+      beach-desert_161: -780230361
+      beach-desert_162: -1730976772
+      beach-desert_163: 1852324195
+      beach-desert_164: -975863811
+      beach-desert_165: -2088614746
+      beach-desert_166: -1484728287
+      beach-desert_167: -2010962079
+      beach-desert_168: 1963966096
+      beach-desert_169: -1625576394
+      beach-desert_17: -2124830424
+      beach-desert_170: 1412536257
+      beach-desert_171: 2090472499
+      beach-desert_172: -1164735212
+      beach-desert_173: -1738161614
+      beach-desert_174: 654351854
+      beach-desert_175: -1324260308
+      beach-desert_176: -146268217
+      beach-desert_177: -293994191
+      beach-desert_178: -1097052467
+      beach-desert_179: 869278312
+      beach-desert_18: 1804011620
+      beach-desert_180: -1365788791
+      beach-desert_181: -1427929137
+      beach-desert_182: 489576308
+      beach-desert_183: 865837024
+      beach-desert_184: -9884908
+      beach-desert_185: -102544303
+      beach-desert_186: 878518048
+      beach-desert_187: -1849284366
+      beach-desert_188: -562027150
+      beach-desert_189: -1067399182
+      beach-desert_19: 1334277333
+      beach-desert_190: -1258512566
+      beach-desert_2: 246047914
+      beach-desert_20: 534928908
+      beach-desert_21: 1726966289
+      beach-desert_22: -634603465
+      beach-desert_23: 802765401
+      beach-desert_24: 682713258
+      beach-desert_25: 1707048737
+      beach-desert_26: 954311017
+      beach-desert_27: 499961770
+      beach-desert_28: 495751265
+      beach-desert_29: -315410724
+      beach-desert_3: 1815589842
+      beach-desert_30: 674738378
+      beach-desert_31: -307967012
+      beach-desert_32: 180072651
+      beach-desert_33: -1910897941
+      beach-desert_34: -135237151
+      beach-desert_35: 1675959245
+      beach-desert_36: 436897645
+      beach-desert_37: 1452141968
+      beach-desert_38: 20281378
+      beach-desert_39: 1081382751
+      beach-desert_4: -974753570
+      beach-desert_40: -1031930662
+      beach-desert_41: -421957227
+      beach-desert_42: 378938008
+      beach-desert_43: 1976384249
+      beach-desert_44: 1886152945
+      beach-desert_45: 1279877220
+      beach-desert_46: -1114884921
+      beach-desert_47: 2014951522
+      beach-desert_48: -1849668415
+      beach-desert_49: -1750911422
+      beach-desert_5: 192093203
+      beach-desert_50: -542188080
+      beach-desert_51: -1943036312
+      beach-desert_52: -2139538284
+      beach-desert_53: 1313072209
+      beach-desert_54: 1256341119
+      beach-desert_55: 1949815829
+      beach-desert_56: -327530095
+      beach-desert_57: -61607342
+      beach-desert_58: -756641956
+      beach-desert_59: -1069601117
+      beach-desert_6: 524382135
+      beach-desert_60: -1540978266
+      beach-desert_61: 354116387
+      beach-desert_62: -860425822
+      beach-desert_63: 932573635
+      beach-desert_64: 591990826
+      beach-desert_65: -816370445
+      beach-desert_66: 133543176
+      beach-desert_67: 964013414
+      beach-desert_68: -584458341
+      beach-desert_69: -689160372
+      beach-desert_7: -1307680035
+      beach-desert_70: -1971565618
+      beach-desert_71: 1208186130
+      beach-desert_72: 860433271
+      beach-desert_73: -502762588
+      beach-desert_74: -1153001655
+      beach-desert_75: -491470406
+      beach-desert_76: 579265617
+      beach-desert_77: 1716063330
+      beach-desert_78: 1006474460
+      beach-desert_79: 877153875
+      beach-desert_8: 1444754532
+      beach-desert_80: 1649271425
+      beach-desert_81: -948888648
+      beach-desert_82: -398011428
+      beach-desert_83: 1844184911
+      beach-desert_84: -479767182
+      beach-desert_85: 1188913839
+      beach-desert_86: 934484185
+      beach-desert_87: -1469658245
+      beach-desert_88: -1526132553
+      beach-desert_89: 842027489
+      beach-desert_9: -1317440692
+      beach-desert_90: 556102778
+      beach-desert_91: -744262239
+      beach-desert_92: 1295539687
+      beach-desert_93: 1387074645
+      beach-desert_94: 907606301
+      beach-desert_95: -1243060215
+      beach-desert_96: 346135889
+      beach-desert_97: 973968242
+      beach-desert_98: 2059631474
+      beach-desert_99: 1906478213
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
