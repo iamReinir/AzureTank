@@ -138,8 +138,7 @@ public class PlayerBehaviour : MonoBehaviour
         HP -= amount;
         if (HP <= 0)
         {
-            Time.timeScale = 0;
-            //EndPointBehavior.Endgame("You lose");
+            EndPointBehavior.Endgame(false);
         }
     }
     Vector2 ShootingDirection()
@@ -174,8 +173,7 @@ public class PlayerBehaviour : MonoBehaviour
         HP -= amount;
         if (HP <= 0)
         {
-            Time.timeScale = 0;
-            //EndPointBehavior.Endgame("You lose");
+            EndPointBehavior.Endgame(false);
         }
     }
 
