@@ -16,8 +16,8 @@ public class PlayerBehaviour : MonoBehaviour
     // Player's stats
     const int mov_speed = 1200;
     const int bullet_speed = 1000;
-    int Max_HP { get; set; } = 600;
-    public int HP { get; set; } = 600;
+    int Max_HP { get; set; } = 3000;
+    public int HP { get; set; } = 3000;
 
     // Enemy count: if enemy number == 0 => win game
     int enemyCount = 0;
@@ -31,7 +31,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     // Game state
     public bool isGameOver = false;
-
+    EndGameBehavior endGameBehavior;
     // Start is called before the first frame update
     private void Start()
     {
@@ -44,6 +44,7 @@ public class PlayerBehaviour : MonoBehaviour
         gameObject.tag = Tag.player;
         DontDestroyOnLoad(gameObject);
         DontDestroyOnLoad(gun);
+        endGameBehavior = GameObject.FindAnyObjectByType<EndGameBehavior>(); ;
     }
 
     void Update()
@@ -61,12 +62,6 @@ public class PlayerBehaviour : MonoBehaviour
                                $"\nEnemy count : {enemyCount}" +
                                $"\nRocket count : {rocketCount}");
         hp_overlay.transform.position = this.transform.position + new Vector3(0, 1, -5);
-
-        if (enemyCount == 0)
-        {
-            //EndPointBehavior.gameObject.SetActive(true);
-            //EndPointBehavior.isWinGame = true;
-        }
     }
 
     void Update_gun()
@@ -116,6 +111,7 @@ public class PlayerBehaviour : MonoBehaviour
                 y = -mov_speed
             });
         }
+
         if (moved)
             mov.HeadingToward(mov_dir);     
     }
@@ -138,7 +134,7 @@ public class PlayerBehaviour : MonoBehaviour
         HP -= amount;
         if (HP <= 0)
         {
-            EndPointBehavior.Endgame(false);
+            endGameBehavior.Endgame(false);
         }
     }
     Vector2 ShootingDirection()
@@ -173,7 +169,7 @@ public class PlayerBehaviour : MonoBehaviour
         HP -= amount;
         if (HP <= 0)
         {
-            EndPointBehavior.Endgame(false);
+            endGameBehavior.Endgame(false);
         }
     }
 

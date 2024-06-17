@@ -5,33 +5,26 @@ using UnityEngine.UI;
 
 public class EndPointBehavior : MonoBehaviour
 {
-    [SerializeField]
-    public GameObject gameOverPanel;
+    private EndGameBehavior endGameBehavior;
+    public GameObject endPoint;
+    // Enemy count: if enemy number == 0 => win game
+    int enemyCount = 0;
 
-    [SerializeField]
-    public GameObject intervention;
-
-    [SerializeField]
-    public TMP_Text endGameTitle;
-
-    public static bool isEndGame = false;
-
+    void Start()
+    {
+        endGameBehavior = GameObject.FindAnyObjectByType<EndGameBehavior>();
+    }
+    private void Update()
+    {
+        enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag(Const.Tag.player))
+        if (collision.gameObject.CompareTag(Const.Tag.player) && enemyCount == 0)
         {
-            Endgame(true);
+            endGameBehavior.Endgame(true);
         }
     }
-    public void Endgame(Boolean isWin)
-    {
-        
-        intervention.SetActive(true);
-        gameOverPanel.SetActive(true);
 
-        isEndGame = true;
-        endGameTitle.text = isWin ? "COMPLETE" : "FALSE";
-        Time.timeScale = 0;
-    }
 }

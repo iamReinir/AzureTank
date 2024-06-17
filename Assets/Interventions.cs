@@ -1,5 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -13,7 +15,7 @@ public class Interventions : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && EndPointBehavior.isEndGame == false)
+        if (Input.GetKeyDown(KeyCode.Escape) && EndGameBehavior.isEndGame == false)
         {
             if (pausePanel.activeSelf)
             {
@@ -42,9 +44,37 @@ public class Interventions : MonoBehaviour
 
     public void RestartScene()
     {
+        var player = GameObject.FindGameObjectsWithTag("Player").FirstOrDefault();
+        Destroy(player);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        EndPointBehavior.isEndGame = false;
+        EndGameBehavior.isEndGame = false;
         Time.timeScale = 1f;
+        interventionPanel.SetActive(false);
+        pausePanel.SetActive(false);
+    }
 
+    public void RestartGame()
+    {
+        var player = GameObject.FindGameObjectsWithTag("Player").FirstOrDefault();
+        var HP = GameObject.FindGameObjectsWithTag("UI").FirstOrDefault();
+        Destroy(player);
+        Destroy(HP);
+
+        SceneManager.LoadSceneAsync(Const.Scence.CHAP1_1);
+        EndGameBehavior.isEndGame = false;
+        Time.timeScale = 1f;
+        interventionPanel.SetActive(false);
+        pausePanel.SetActive(false);
+    }
+
+    public static Interventions Instance;
+
+    private void Awake()
+    {
+
+            DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(interventionPanel);
+
+        
     }
 }

@@ -1,3 +1,4 @@
+using Const;
 using UnityEngine;
 
 public class BulletBehaviour : MonoBehaviour
@@ -5,7 +6,6 @@ public class BulletBehaviour : MonoBehaviour
     // Start is called before the first frame update
     float live_time = 0.8f;
     public int damage = 100;
-    public string side;
     void Start()
     {
         GetComponent<SpriteRenderer>().sortingOrder = Const.Layer.bullet;
@@ -22,14 +22,14 @@ public class BulletBehaviour : MonoBehaviour
             return;
         }
         var player = collision.gameObject.GetComponent<PlayerBehaviour>();
-        if (player != null && collision.CompareTag(side) == false)
+        if (player != null)
         {
             player.apply_dmg(damage);
             Destroy(gameObject);
             return;
         }
         var enemy = collision.gameObject.GetComponent<Enemy_turret>();
-        if (enemy != null && collision.CompareTag(side) == false)
+        if (enemy != null)
         {
             enemy.ApplyDame(1);
             Destroy(gameObject);
