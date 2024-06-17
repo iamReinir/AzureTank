@@ -1,40 +1,30 @@
+using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class EndPointBehavior : MonoBehaviour
 {
-    // UI elements for Game Over
-    public GameObject gameOverPanel;
-    public Text gameOverText;
+    private EndGameBehavior endGameBehavior;
+    public GameObject endPoint;
+    // Enemy count: if enemy number == 0 => win game
+    int enemyCount = 0;
 
-    public bool isWinGame = false;
-    // Start is called before the first frame update
     void Start()
     {
-
+        endGameBehavior = GameObject.FindAnyObjectByType<EndGameBehavior>();
     }
-
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag(Const.Tag.player))
+        if (collision.gameObject.CompareTag(Const.Tag.player) && enemyCount == 0)
         {
-            Endgame("You win");
+            endGameBehavior.Endgame(true);
         }
     }
-    public void Endgame(string text)
-    {
-        // Display "Game Over" message
-        gameOverPanel.SetActive(true);
-        gameOverText.text = text;
-        isWinGame = false;
 
-        // Stop the game
-        Time.timeScale = 0;
-    }
 }
