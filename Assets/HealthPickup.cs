@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class HealthPickup : MonoBehaviour
 {
-    private const int healthAmount = 50; // Amount of HP to restore
+    private const int healthAmount = 200; // Amount of HP to restore
 
     private void OnTriggerEnter2D(Collider2D other)
     {
