@@ -55,10 +55,17 @@ public class Interventions : MonoBehaviour
 
     public void RestartGame()
     {
+        foreach (GameObject gameObject in Object.FindObjectsOfType<GameObject>())
+        {
+            Destroy(gameObject);
+        }
+        /*
         var player = GameObject.FindGameObjectsWithTag("Player").FirstOrDefault();
+        var gun = GameObject.FindFirstObjectByType<TurretBehaviour>();
         var HP = GameObject.FindGameObjectsWithTag("UI").FirstOrDefault();
         Destroy(player);
         Destroy(HP);
+        Destroy(gun);*/
 
         SceneManager.LoadSceneAsync(Const.Scence.CHAP1_1);
         EndGameBehavior.isEndGame = false;

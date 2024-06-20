@@ -14,9 +14,9 @@ public class Enemy_turret : MonoBehaviour
     const int shoot_speed = 60;
     const float give_up_dist = 15;
     const float comfort_dist = 5;
-    float reset_shootCD = 1f;
-    float shootCD = 1f;
-    int moving_speed = 1000;
+    //float reset_shootCD = 1f;
+    // float shootCD = 1f;
+    //int moving_speed = 1000;
     int hp = 3;
 
     public GameObject? bombPickupPrefab; // Prefab of bomb

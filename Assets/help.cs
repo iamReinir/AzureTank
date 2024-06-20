@@ -14,6 +14,9 @@ public class help : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        gameObj.SetActive(false);
+        if (gameObj == null)
+        {
+            gameObj.SetActive(false);
+        }   
     }
 }
