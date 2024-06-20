@@ -26,14 +26,16 @@ public class Enemy_turret : MonoBehaviour
     private PlayerBehaviour? player;
     private CommonHelper? helper;
     SpriteRenderer? spriteRenderer;
+    HeadUpDisplay hub;
 
-    [System.Obsolete]
+	[System.Obsolete]
     void Start()
     {
         player = FindObjectOfType<PlayerBehaviour>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         helper = new CommonHelper();
-    }
+        hub = FindAnyObjectByType<HeadUpDisplay>();
+	}
 
     void Update()
     {
@@ -57,7 +59,12 @@ public class Enemy_turret : MonoBehaviour
         }
         switch (hp)
         {
-            case 0: { DropItem(); Destroy(gameObject); break; }
+            case 0: 
+                DropItem();
+                Destroy(gameObject);
+                hub?.AddKill();
+                hub?.AddExp(20);
+                break;
             case 1: spriteRenderer.color = Color.gray; break;
             case 2: spriteRenderer.color = Color.yellow; break;
         }

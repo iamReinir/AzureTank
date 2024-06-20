@@ -31,6 +31,7 @@ public class EndGameBehavior : MonoBehaviour
         nextLevel.SetActive(isWin);
         isEndGame = true;
         endGameTitle.text = isWin ? "VICTORY" : "DEFEATED";
+        FindAnyObjectByType<TimeCounter>().StopTimer();
         Time.timeScale = 0;
     }
 }

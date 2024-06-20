@@ -804,6 +804,7 @@ GameObject:
   - component: {fileID: 267904394}
   - component: {fileID: 267904396}
   - component: {fileID: 267904397}
+  - component: {fileID: 267904398}
   m_Layer: 0
   m_Name: Tree
   m_TagString: Untagged
@@ -2846,6 +2847,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &267904398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 267904392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58b646cc726d3174f98d93d58b66436d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &318502743
 GameObject:
   m_ObjectHideFlags: 0
@@ -12704,6 +12717,7 @@ GameObject:
   - component: {fileID: 773123039}
   - component: {fileID: 773123038}
   - component: {fileID: 773123037}
+  - component: {fileID: 773123040}
   - component: {fileID: 773123036}
   - component: {fileID: 773123035}
   m_Layer: 0
@@ -13695,6 +13709,18 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &773123040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773123033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58b646cc726d3174f98d93d58b66436d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &869648694
 GameObject:
   m_ObjectHideFlags: 0
