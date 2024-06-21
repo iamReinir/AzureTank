@@ -16,6 +16,9 @@ public class PlayerBehaviour : MonoBehaviour
     public int Max_HP { get; set; } = 3000;
     public int HP { get; set; } = 3000;
 
+    public float shootCD = 0.3f;
+    float curShootCD = 0.3f;
+
     // Enemy count: if enemy number == 0 => win game
     int enemyCount = 0;
 
@@ -58,14 +61,21 @@ public class PlayerBehaviour : MonoBehaviour
         //hp_overlay.transform.position = this.transform.position + new Vector3(0, 1, -5);
     }
 
-    void Update_gun()
+	float currentAngle = 0;
+	void Update_gun()
     {
-        var mouse_pos = ShootingDirection();
-        var angle = Mathf.Atan2(mouse_pos.y, mouse_pos.x) * Mathf.Rad2Deg;
-        gun.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
-        gun.transform.position = this.transform.position;
-    }
-    void Moving_check()
+        var mouse_pos = ShootingDirection();        		
+		var desired_angle = Vector2.SignedAngle(Vector2.right, mouse_pos);
+		var result_angle = (desired_angle - currentAngle);
+		if (result_angle > 180f) result_angle -= 360f;
+		if (result_angle < -180f) result_angle += 360f;
+		currentAngle += result_angle * 10f * Time.deltaTime;
+		gun.transform.rotation = Quaternion.Euler(new Vector3(0, 0, currentAngle));
+        gun.transform.position = this.transform.position;		
+
+	}   
+
+	void Moving_check()
     {
         Vector2 mov_dir = rig.position;
         bool moved = false;
@@ -112,11 +122,13 @@ public class PlayerBehaviour : MonoBehaviour
 
     void Shooting_check()
     {
-        if (isGameOver) return;
+        curShootCD -= Time.deltaTime;
+        if (curShootCD > 0 || Time.timeScale == 0f) return;        
         if (Input.GetMouseButtonDown(0))
         {
             var pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             GetComponent<CannonMounted>().Shoot_at(pos);
+            curShootCD = shootCD;
         }
         if (Input.GetKey(Key.ROCKET))
         {

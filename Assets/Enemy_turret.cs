@@ -35,6 +35,7 @@ public class Enemy_turret : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         helper = new CommonHelper();
         hub = FindAnyObjectByType<HeadUpDisplay>();
+        GetComponent<SpriteRenderer>().sortingOrder = Const.Layer.body;
 	}
 
     void Update()
