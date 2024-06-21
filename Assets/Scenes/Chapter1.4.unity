@@ -2265,6 +2265,7 @@ GameObject:
   - component: {fileID: 465113766}
   - component: {fileID: 465113765}
   - component: {fileID: 465113768}
+  - component: {fileID: 465113770}
   - component: {fileID: 465113767}
   - component: {fileID: 465113769}
   - component: {fileID: 465113770}
@@ -10375,7 +10376,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1572822390}
   m_Father: {fileID: 1380913814}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &1165424760
@@ -17589,7 +17591,6 @@ Transform:
   m_Children:
   - {fileID: 465113764}
   - {fileID: 1165424759}
-  - {fileID: 1572822390}
   - {fileID: 130136560}
   - {fileID: 1029530178}
   m_Father: {fileID: 0}
@@ -18116,7 +18117,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1380913814}
+  m_Father: {fileID: 1165424759}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!19719996 &1572822391
 TilemapCollider2D:

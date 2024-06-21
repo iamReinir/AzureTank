@@ -1,8 +1,5 @@
 using Const;
-using UnityEditor.SceneManagement;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI; // For reloading the scene
 
 public class PlayerBehaviour : MonoBehaviour
 {
@@ -16,14 +13,14 @@ public class PlayerBehaviour : MonoBehaviour
     // Player's stats
     const int mov_speed = 1200;
     const int bullet_speed = 1000;
-    int Max_HP { get; set; } = 3000;
+    public int Max_HP { get; set; } = 3000;
     public int HP { get; set; } = 3000;
 
     // Enemy count: if enemy number == 0 => win game
     int enemyCount = 0;
 
     // Rocket count
-    int rocketCount = 0;
+    public int rocketCount = 0;
 
     // Helper variables
     Rigidbody2D rig;
@@ -58,10 +55,7 @@ public class PlayerBehaviour : MonoBehaviour
     void Update_camera()
     {
         enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
-        hp_overlay.SendMessage("display", $"HP : {HP}/{Max_HP} " +
-                               $"\nEnemy count : {enemyCount}" +
-                               $"\nRocket count : {rocketCount}");
-        hp_overlay.transform.position = this.transform.position + new Vector3(0, 1, -5);
+        //hp_overlay.transform.position = this.transform.position + new Vector3(0, 1, -5);
     }
 
     void Update_gun()
