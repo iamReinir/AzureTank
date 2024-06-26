@@ -17,21 +17,18 @@ public class EndGameBehavior : MonoBehaviour
     [SerializeField]
     public TMP_Text endGameTitle;
 
-    [SerializeField]
-    public GameObject nextLevel;
 
     public static bool isEndGame = false;
 
 
     public void Endgame(Boolean isWin)
     {
-
         intervention.SetActive(true);
         gameOverPanel.SetActive(true);
-        nextLevel.SetActive(isWin);
         isEndGame = true;
         endGameTitle.text = isWin ? "VICTORY" : "DEFEATED";
         FindAnyObjectByType<TimeCounter>().StopTimer();
         Time.timeScale = 0;
+        FindAnyObjectByType<HeadUpDisplay>().SaveScore();
     }
 }

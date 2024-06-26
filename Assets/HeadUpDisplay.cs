@@ -1,7 +1,8 @@
+using Const;
 using System;
+using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class HeadUpDisplay : MonoBehaviour
@@ -100,5 +101,26 @@ public class HeadUpDisplay : MonoBehaviour
 				.GetComponent<SpriteRenderer>();
 		DontDestroyOnLoad(sprite.gameObject);
 		state = State.fade;		
+	}
+	public int Score()
+	{
+		bool win = player.HP > 0;
+		return (win ? ((int)Mathf.Round(600f / counter.playTime) * 200) : 0) + exp;
+	}
+
+	public void SaveScore()
+	{
+		ScoreBoardItems scores;
+		string data = PlayerPrefs.GetString(ScoreBoardItems.All);
+		if(string.IsNullOrEmpty(data)) {
+			scores = new ScoreBoardItems();
+		}
+		else
+		{
+			scores = JsonUtility.FromJson<ScoreBoardItems>(data);
+		}
+		scores.Add(counter.gameDuration,Score());
+		data = JsonUtility.ToJson(scores);		
+		PlayerPrefs.SetString(ScoreBoardItems.All,data);
 	}
 }

@@ -75,13 +75,33 @@ public class Interventions : MonoBehaviour
     }
 
     public static Interventions Instance;
-
-    private void Awake()
+    public void exitToMainMenu()
     {
+        Destroy(interventionPanel);
 
-            DontDestroyOnLoad(gameObject);
-            DontDestroyOnLoad(interventionPanel);
+        GameObject[] objectsInScene = FindObjectsOfType<GameObject>();
 
-        
+        foreach (GameObject obj in objectsInScene)
+        {
+            Destroy(obj);
+        }
+        var temp = new GameObject();
+        DontDestroyOnLoad(temp);
+        Scene dontDestroyOnLoadScene = temp.scene;
+        Destroy(temp);
+
+        foreach (GameObject obj in dontDestroyOnLoadScene.GetRootGameObjects())
+        {
+            Destroy(obj);
+        }
+
+        SceneManager.LoadSceneAsync(0);
+    }
+
+
+private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(interventionPanel);
     }
 }

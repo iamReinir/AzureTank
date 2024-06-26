@@ -28,6 +28,7 @@ public class PlayerBehaviour : MonoBehaviour
     // Helper variables
     Rigidbody2D rig;
     MovingBehaviour mov;
+    SpriteRenderer sprite;
 
     // Game state
     public bool isGameOver = false;
@@ -35,8 +36,9 @@ public class PlayerBehaviour : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        GetComponent<CannonMounted>().bullet_speed = 1000;
-        GetComponent<SpriteRenderer>().sortingOrder = Layer.body;
+        sprite = GetComponent<SpriteRenderer>();
+		GetComponent<CannonMounted>().bullet_speed = 1000;
+		sprite.sortingOrder = Layer.body;
         gun.GetComponent<SpriteRenderer>().sortingOrder= Layer.turret;
         rig = GetComponent<Rigidbody2D>();
         mov = GetComponent<MovingBehaviour>();
@@ -53,7 +55,10 @@ public class PlayerBehaviour : MonoBehaviour
         Update_gun();
         Moving_check();
         Shooting_check();
-    }
+
+		float rate = (float)(HP) / (float)Max_HP + 0.2f;        
+		sprite.color = new Color(rate, rate, rate);
+	}
 
     void Update_camera()
     {
@@ -137,7 +142,7 @@ public class PlayerBehaviour : MonoBehaviour
     }
     public void apply_dmg(int amount)
     {
-        HP -= amount;
+        HP -= amount;        
         if (HP <= 0)
         {
             endGameBehavior.Endgame(false);
