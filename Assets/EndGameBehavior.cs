@@ -23,12 +23,12 @@ public class EndGameBehavior : MonoBehaviour
 
     public void Endgame(Boolean isWin)
     {
-
         intervention.SetActive(true);
         gameOverPanel.SetActive(true);
         isEndGame = true;
         endGameTitle.text = isWin ? "VICTORY" : "DEFEATED";
         FindAnyObjectByType<TimeCounter>().StopTimer();
         Time.timeScale = 0;
+        FindAnyObjectByType<HeadUpDisplay>().SaveScore();
     }
 }

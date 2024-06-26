@@ -8,9 +8,14 @@ public class MainMenu : MonoBehaviour
     [SerializeField]
     GameObject scoreBoard;
 
-    public void NewGame()
+	private void Start()
+	{
+		scoreBoard.SetActive(false);
+	}
+	public void NewGame()
     {
         SceneManager.LoadSceneAsync(Const.Scence.CHAP1_1);
+        Time.timeScale = 1f;
     }
 
     public void viewScoreBoard()

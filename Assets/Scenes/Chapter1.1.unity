@@ -81498,7 +81498,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6151438658598417697, guid: 373aa7e3b390e6e47b152d14cc6afc0c, type: 3}
   m_PrefabInstance: {fileID: 5292633394900075255}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1901659406
+--- !u!114 &1901659403
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -81507,7 +81507,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1901659402}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f796f0ead8bfce478ae9ae152bfaa01, type: 3}
+  m_Script: {fileID: 11500000, guid: ab43d5c9ed8dc6344a39c2160665a389, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1925487330
@@ -81603,6 +81603,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1426211849}
     m_Modifications:
+    - target: {fileID: 596937364512760687, guid: 373aa7e3b390e6e47b152d14cc6afc0c, type: 3}
+      propertyPath: m_text
+      value: SCORE
+      objectReference: {fileID: 0}
     - target: {fileID: 1660360933742875060, guid: 373aa7e3b390e6e47b152d14cc6afc0c, type: 3}
       propertyPath: m_Name
       value: Intervention
@@ -81731,6 +81735,38 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4752485425693296561, guid: 373aa7e3b390e6e47b152d14cc6afc0c, type: 3}
+      propertyPath: m_Colors.m_ColorMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5284418176623835702, guid: 373aa7e3b390e6e47b152d14cc6afc0c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5284418176623835702, guid: 373aa7e3b390e6e47b152d14cc6afc0c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5284418176623835702, guid: 373aa7e3b390e6e47b152d14cc6afc0c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 464644122}
+    - target: {fileID: 5284418176623835702, guid: 373aa7e3b390e6e47b152d14cc6afc0c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5284418176623835702, guid: 373aa7e3b390e6e47b152d14cc6afc0c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: exitToMainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 5284418176623835702, guid: 373aa7e3b390e6e47b152d14cc6afc0c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Interventions, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5284418176623835702, guid: 373aa7e3b390e6e47b152d14cc6afc0c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8784021125911714192, guid: 373aa7e3b390e6e47b152d14cc6afc0c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -81738,6 +81774,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 720509275225049090, guid: 373aa7e3b390e6e47b152d14cc6afc0c, type: 3}
+    - {fileID: 7657495150727084096, guid: 373aa7e3b390e6e47b152d14cc6afc0c, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7890676211580767487, guid: 373aa7e3b390e6e47b152d14cc6afc0c, type: 3}
@@ -81745,7 +81782,7 @@ PrefabInstance:
       addedObject: {fileID: 245849922}
     - targetCorrespondingSourceObject: {fileID: 6151438658598417697, guid: 373aa7e3b390e6e47b152d14cc6afc0c, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1901659406}
+      addedObject: {fileID: 1901659403}
     - targetCorrespondingSourceObject: {fileID: 374063821875135482, guid: 373aa7e3b390e6e47b152d14cc6afc0c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1936126891}
