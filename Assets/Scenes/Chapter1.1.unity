@@ -373,11 +373,6 @@ RectTransform:
   m_AnchoredPosition: {x: -50.5, y: 64.9}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &88767338 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 720509275225049090, guid: 373aa7e3b390e6e47b152d14cc6afc0c, type: 3}
-  m_PrefabInstance: {fileID: 5292633394900075255}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &232736504 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5104521591011019158, guid: 373aa7e3b390e6e47b152d14cc6afc0c, type: 3}
@@ -792,7 +787,6 @@ MonoBehaviour:
   gameOverPanel: {fileID: 1847166972}
   intervention: {fileID: 1578947388}
   endGameTitle: {fileID: 1168024112}
-  nextLevel: {fileID: 88767338}
 --- !u!114 &464644124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81613,10 +81607,46 @@ PrefabInstance:
       propertyPath: m_Name
       value: Intervention
       objectReference: {fileID: 0}
+    - target: {fileID: 1660360933742875060, guid: 373aa7e3b390e6e47b152d14cc6afc0c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2034018333731102038, guid: 373aa7e3b390e6e47b152d14cc6afc0c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 322.21
+      objectReference: {fileID: 0}
     - target: {fileID: 2275238638046954639, guid: 373aa7e3b390e6e47b152d14cc6afc0c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 464644122}
+    - target: {fileID: 3480121190608484611, guid: 373aa7e3b390e6e47b152d14cc6afc0c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3480121190608484611, guid: 373aa7e3b390e6e47b152d14cc6afc0c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3480121190608484611, guid: 373aa7e3b390e6e47b152d14cc6afc0c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 464644122}
+    - target: {fileID: 3480121190608484611, guid: 373aa7e3b390e6e47b152d14cc6afc0c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3480121190608484611, guid: 373aa7e3b390e6e47b152d14cc6afc0c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: exitToMainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 3480121190608484611, guid: 373aa7e3b390e6e47b152d14cc6afc0c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Interventions, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3480121190608484611, guid: 373aa7e3b390e6e47b152d14cc6afc0c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3944520405299005554, guid: 373aa7e3b390e6e47b152d14cc6afc0c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -81697,12 +81727,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3973116378820943069, guid: 373aa7e3b390e6e47b152d14cc6afc0c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8784021125911714192, guid: 373aa7e3b390e6e47b152d14cc6afc0c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 464644122}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 720509275225049090, guid: 373aa7e3b390e6e47b152d14cc6afc0c, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7890676211580767487, guid: 373aa7e3b390e6e47b152d14cc6afc0c, type: 3}
